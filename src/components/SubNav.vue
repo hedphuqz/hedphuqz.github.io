@@ -13,7 +13,7 @@ export default {};
 <style lang="scss" scoped>
 .subNavList {
   position: absolute;
-  left: 2%;
+  left: 6%;
   height: 100%;
   top: 0px;
   display: flex;
