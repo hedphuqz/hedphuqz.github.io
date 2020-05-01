@@ -1,5 +1,15 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="full" style="position: relative">
+    <sub-nav />
   </div>
 </template>
+
+<script>
+import SubNav from "../components/SubNav.vue";
+export default {
+  name: "about",
+  components: {
+    SubNav
+  }
+};
+</script>
