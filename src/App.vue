@@ -58,6 +58,15 @@ a {
   height: 100%;
 }
 
+.contentView {
+  left: 10%;
+  position: absolute;
+  width: 90%;
+  padding: 3rem;
+  overflow-y: scroll;
+  height: 100%;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
