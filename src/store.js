@@ -4,7 +4,13 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    introAnimationRun: false
+  },
+  mutations: {
+    animHasRun(state) {
+      state.introAnimationRun = true;
+    }
+  },
   actions: {}
 });
