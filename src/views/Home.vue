@@ -1,6 +1,8 @@
 <template>
   <div class="full" style="position: relative">
-    <vertical-bar :key="bar" v-for="bar in 15" :index="bar" />
+    <template v-if="!introAnimRun">
+      <vertical-bar :key="bar" v-for="bar in 15" :index="bar" />
+    </template>
     <transition name="fade">
       <div v-if="showName" class="nameContainer">
         <span>Francis Powlesland</span>
@@ -55,14 +57,29 @@ export default {
       }
     }
   },
-  mounted() {
-    setTimeout(() => (this.showName = true), 500);
-    setTimeout(() => (this.showNav = true), 2500);
-    setTimeout(() => (this.showName = false), 4000);
+  beforeRouteLeave(to, from, next) {
+    // Allow time to precess animations before updating DOM
+    this.staggerOut();
+    setTimeout(() => next(), 1000);
   },
-  beforeDestroy() {
-    this.showNav = false;
-  }
+  beforeRouteEnter(to, from, next) {
+    // Allow time to precess animations before updating DOM
+    next(vm => setTimeout(() => vm.staggerIn(), 3000));
+  },
+  computed: {
+    introAnimRun() {
+      return this.$store.state.introAnimationRun;
+    }
+  },
+  mounted() {
+    if (!this.introAnimRun) {
+      setTimeout(() => (this.showName = true), 500);
+      setTimeout(() => (this.showName = false), 4000);
+    }
+
+    setTimeout(() => (this.showNav = true), 2500);
+  },
+  beforeDestroy() {}
 };
 </script>
 <style lang="scss" scoped>
