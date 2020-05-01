@@ -1,6 +1,6 @@
 <template>
   <div class="full" style="position: relative">
-    <sub-nav :links="navLinks" ref="subNav" />
+    <sub-nav ref="subNav" />
     <div class="contentView">
       <picviewer ref="picviewer" :imageprops="picData" />
     </div>

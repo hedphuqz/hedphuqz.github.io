@@ -5,7 +5,9 @@
     </template>
     <transition name="fade">
       <div v-if="showName" class="nameContainer">
-        <span>Francis Powlesland</span>
+        <span style="font-size: calc(3rem + 6 * ((100vw - 120px) / 180));"
+          >Francis Powlesland</span
+        >
       </div>
     </transition>
     <transition

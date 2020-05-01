@@ -1,5 +1,10 @@
 <template>
   <div ref="subNavList" class="subNavList">
+    <div>
+      <router-link to="/">
+        <span style="color: white; font-size: 3rem;">&#171;</span>
+      </router-link>
+    </div>
     <div v-for="link in links" :key="`${link.name}`">
       <router-link :to="link.linkTo">
         <h2>{{ link.name }}</h2>
@@ -34,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .subNavList {
   position: absolute;
-  right: 90%;
+  left: 5px;
   height: 100%;
   top: 0px;
   display: flex;
@@ -42,6 +47,7 @@ export default {
   border-right: 10px solid white;
   padding-right: 20px;
   justify-content: flex-start;
+  align-items: flex-end;
 
   div {
     transition: opacity 1s;

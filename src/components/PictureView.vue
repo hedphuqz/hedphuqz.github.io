@@ -71,13 +71,13 @@ export default {
 <style lang="scss" scoped>
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(23vw, 1fr));
   grid-gap: 5px;
   padding-bottom: 3rem;
 }
 
 .imgSquare {
-  height: 250px;
+  height: 23vw;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -88,13 +88,18 @@ export default {
 .modalContainer {
   position: fixed;
   top: 0px;
-  left: 10%;
-  width: 90%;
+  left: 0px;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.6);
+
+  img {
+    width: 75vw;
+    height: auto;
+  }
 }
 </style>
