@@ -40,7 +40,8 @@ export default {
       { name: "About", linkTo: "/about" },
       { name: "Work", linkTo: "/work" },
       { name: "Experience", linkTo: "/experience" },
-      { name: "Contact", linkTo: "/contact" }
+      { name: "Contact", linkTo: "/contact" },
+      { name: "Pics", linkTo: "/photos" }
     ]
   }),
   methods: {
@@ -50,16 +51,25 @@ export default {
         setTimeout(() => (navItems[index].style.opacity = 1), 150 * index);
       }
     },
-    staggerOut() {
+    staggerOut(selectedIndex) {
+      // We take the index and stagger out around the selected nav button
       const navItems = this.$refs.navList.children;
       for (let index = 0; index < navItems.length; index++) {
-        setTimeout(() => (navItems[index].style.opacity = 0), 150 * index);
+        setTimeout(
+          () => (navItems[index].style.opacity = 0),
+          600 * (1 / (Math.abs(index - selectedIndex) + 1))
+        );
       }
+    },
+    flashName() {
+      setTimeout(() => (this.showName = true), 500);
+      setTimeout(() => (this.showName = false), 4000);
     }
   },
   beforeRouteLeave(to, from, next) {
     // Allow time to precess animations before updating DOM
-    this.staggerOut();
+    const indexOfItem = this.links.findIndex(link => link.linkTo === to.path);
+    this.staggerOut(indexOfItem);
     setTimeout(() => next(), 1000);
   },
   beforeRouteEnter(to, from, next) {
@@ -73,8 +83,7 @@ export default {
   },
   mounted() {
     if (!this.introAnimRun) {
-      setTimeout(() => (this.showName = true), 500);
-      setTimeout(() => (this.showName = false), 4000);
+      this.flashName();
     }
 
     setTimeout(() => (this.showNav = true), 2500);
