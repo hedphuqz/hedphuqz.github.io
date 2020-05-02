@@ -11,6 +11,11 @@
 <style lang="scss">
 * {
   box-sizing: border-box;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -62,9 +67,17 @@ a {
   left: 10%;
   position: absolute;
   width: 90%;
-  padding: 3rem;
+  padding: 1rem;
   overflow-y: scroll;
   height: 100%;
+}
+
+@media only screen and (max-width: 550px) {
+  /* For mobile phones: */
+  .contentView {
+    left: 20%;
+    width: 80%;
+  }
 }
 
 .fade-enter-active,

@@ -99,7 +99,15 @@ export default {
 
   img {
     width: 75vw;
+    max-width: 1080px;
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .modalContainer img {
+    width: 100vw;
   }
 }
 </style>

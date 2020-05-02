@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .subNavList {
   position: absolute;
-  left: 5px;
+  right: 90vw;
   height: 100%;
   top: 0px;
   display: flex;
@@ -52,6 +52,13 @@ export default {
   div {
     transition: opacity 1s;
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  /* For mobile phones: */
+  .subNavList {
+    right: 80vw;
   }
 }
 </style>
