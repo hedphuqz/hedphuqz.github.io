@@ -4,11 +4,14 @@
     <div ref="aboutContent" class="contentView aboutContainer">
       <img src="../assets/DSC02278~2.jpg" />
       <h1 ref="hiword" style="font-weight: 100;">Hey!</h1>
-      <p :key="i" v-for="i in 5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia facilis
-        eaque esse blanditiis laborum perferendis deleniti, perspiciatis nostrum
-        cum eius, sapiente eveniet asperiores necessitatibus accusantium aut
-        quam iste nobis molestias.
+      <p>
+        Hey there! My name is Francis and I am a british techie nerd working in
+        Munich, Germany. I have a passion for several things including design,
+        architecture (the building kind), music - in particular singing,
+        travelling and constantly learning. This site is something i dreamt up
+        recently after putting off making my own website for a long time. If you
+        want to get in touch with me about anything, you can
+        <a href="/#/contact">contact me here</a>.
       </p>
     </div>
   </div>
@@ -79,6 +82,11 @@ export default {
     border-bottom: 1px solid gray;
     padding-bottom: 1rem;
     border-radius: 10px 10px 0px 0px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid gray;
   }
 }
 </style>
