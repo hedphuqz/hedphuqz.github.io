@@ -45,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 .verticalLine {
   position: absolute;
-  background-color: white;
+  background-color: var(--font-color);
   height: 100%;
 }
 </style>

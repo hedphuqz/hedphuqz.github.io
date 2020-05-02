@@ -2,7 +2,7 @@
   <div ref="subNavList" class="subNavList">
     <div>
       <router-link to="/">
-        <span style="color: white; font-size: 3rem;">&#171;</span>
+        <span style="color: var(--font-color); font-size: 3rem;">&#171;</span>
       </router-link>
     </div>
     <div v-for="link in links" :key="`${link.name}`">
@@ -44,7 +44,7 @@ export default {
   top: 0px;
   display: flex;
   flex-direction: column;
-  border-right: 10px solid white;
+  border-right: 10px solid var(--font-color);
   padding-right: 20px;
   justify-content: flex-start;
   align-items: flex-end;

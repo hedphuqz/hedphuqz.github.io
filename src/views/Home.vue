@@ -101,7 +101,7 @@ export default {
   top: 0px;
   display: flex;
   flex-direction: column;
-  border-left: 10px solid white;
+  border-left: 10px solid var(--font-color);
   padding-left: 20px;
   justify-content: space-evenly;
 
