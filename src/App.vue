@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="theme-dark">
     <transition name="slideRightComponent" mode="out-in">
       <keep-alive>
         <router-view />
@@ -7,6 +7,12 @@
     </transition>
   </div>
 </template>
+
+<script>
+export default {
+  name: "App"
+};
+</script>
 
 <style lang="scss">
 * {
@@ -37,25 +43,55 @@ h5,
 h6,
 span {
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  color: white;
+  font-weight: 100;
+  color: var(--font-color);
 }
 
-p {
+p,
+ul,
+li,
+ol {
   font-family: "Lato", sans-serif;
-  color: white;
+  color: var(--font-color);
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+li:before {
+  content: "—"; /* Insert content that looks like bullets */
+  padding-right: 8px;
+  color: var(--font-color); /* Or a color you prefer */
 }
 
 a {
   text-decoration: none;
 }
 
+blockquote {
+  border-left: 5px solid gray;
+  margin: 1rem 0px;
+  padding-left: 1rem;
+}
+
+.theme-light {
+  --font-color: #000000;
+  --background-color: #ffffff;
+}
+.theme-dark {
+  --font-color: #ffffff;
+  --background-color: #000000;
+}
+
 #app {
   width: inherit;
   height: inherit;
-  background-color: black;
+  background-color: var(--background-color);
   overflow: hidden;
-  color: white;
+  color: var(--font-color);
 }
 
 .full {
