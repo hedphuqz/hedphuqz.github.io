@@ -5,9 +5,10 @@
     </template>
     <transition name="fade">
       <div v-if="showName" class="nameContainer">
-        <span style="font-size: calc(3rem + 6 * ((100vw - 120px) / 180));"
-          >Francis Powlesland</span
-        >
+        <img
+          src="../assets/FP_rotated.svg"
+          style="width: 35vw; mix-blend-mode: difference; "
+        />
       </div>
     </transition>
     <transition

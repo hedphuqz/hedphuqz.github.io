@@ -10,6 +10,12 @@
         <h2>{{ link.name }}</h2>
       </router-link>
     </div>
+    <div
+      style="margin-top: auto;
+margin-bottom: 1rem;"
+    >
+      <img src="../assets/FP_rotated.svg" style="width: 40px;" />
+    </div>
   </div>
 </template>
 
