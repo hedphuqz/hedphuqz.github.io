@@ -34,6 +34,8 @@ export default {
     // Delay the transition of the lines
 
     setTimeout(() => this.adjustPosition(), 150 * this.index);
+    // Make sure the bars are only removed from the DOM once the transition has fully finished
+    // Add on 50 ms for good measure
     setTimeout(
       () => (this.isShown = false),
       150 * this.index + this.transitionTime * 1000 + 50
