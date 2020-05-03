@@ -53,7 +53,7 @@ export default {
   border-right: 10px solid var(--font-color);
   padding-right: 20px;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: center;
 
   div {
     transition: opacity 1s;
@@ -65,6 +65,7 @@ export default {
   /* For mobile phones: */
   .subNavList {
     right: 80vw;
+    padding-right: 10px;
   }
 }
 </style>

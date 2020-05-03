@@ -126,7 +126,7 @@ blockquote {
 
 .slideRightComponent-enter-active,
 .slideRightComponent-leave-active {
-  transition: 1.5s;
+  transition: 1s ease-in-out;
 }
 .slideRightComponent-enter {
   transform: translateX(-100%);
