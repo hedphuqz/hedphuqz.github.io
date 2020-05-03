@@ -38,26 +38,14 @@ export default {
       loadedPictures: this.imageprops.map(() => false)
     };
   },
-
-  computed: {
-    imageShown() {
-      return this.loadedPictures.map(isLoaded => {
-        return {
-          opacity: isLoaded ? 1 : 0
-        };
-      });
-    }
-  },
   methods: {
     staggerOut() {
-      // We take the index and stagger out around the selected nav button
       const pictures = this.$refs.pictureGrid.children;
       for (let index = 0; index < pictures.length; index++) {
         setTimeout(() => (pictures[index].style.opacity = 0), 50 * index);
       }
     },
     staggerIn() {
-      // We take the index and stagger out around the selected nav button
       const pictures = this.$refs.pictureGrid.children;
 
       for (let index = 0; index < pictures.length; index++) {
