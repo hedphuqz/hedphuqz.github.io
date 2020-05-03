@@ -61,9 +61,6 @@ export default {
   components: {
     SubNav
   },
-  data: () => ({
-    navLinks: [{ name: "Back", linkTo: "/" }]
-  }),
   methods: {
     staggerOut() {
       // We take the index and stagger out around the selected nav button

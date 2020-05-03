@@ -17,7 +17,6 @@ export default {
     Picviewer
   },
   data: () => ({
-    navLinks: [{ name: "Back", linkTo: "/" }],
     picData: [
       "DSC00638.jpg",
       "DSC00670.jpg",

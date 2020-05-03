@@ -11,9 +11,6 @@ export default {
   components: {
     SubNav
   },
-  data: () => ({
-    navLinks: [{ name: "Back", linkTo: "/" }]
-  }),
   mounted() {},
   beforeRouteLeave(to, from, next) {
     // Allow time to precess animations before updating DOM
